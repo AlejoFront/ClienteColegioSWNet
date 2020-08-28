@@ -1,0 +1,80 @@
+﻿.title{
+    width: 100%;
+    margin-top: 2%;
+    text-align:center;
+
+}
+.cont-forms{
+    width:65%;
+    margin: auto;
+}
+.cont-dashboard {
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dasboard {
+    width: 40%;
+    margin: 2%;
+}
+
+.dasboard-student {
+    display: flex;
+    justify-content: center;
+    background: #4d6acb;
+    min-height: 150px;
+    color: #FFFFFF;
+    padding: 10px;
+    -webkit-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+}
+
+    .dasboard-student h2 {
+        width: 90%;
+        padding: 10px;
+        text-align-last: center;
+        font-size: 25px;
+    }
+
+.dasboard-Matricula {
+    display: flex;
+    justify-content: center;
+    background: #1c5c41;
+    min-height: 150px;
+    color: #FFFFFF;
+    padding: 10px;
+    -webkit-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+}
+
+    .dasboard-Matricula h2 {
+        width: 90%;
+        padding: 10px;
+        text-align-last: center;
+        font-size: 25px;
+    }
+
+.dasboard-Colegio {
+    display: flex;
+    justify-content: center;
+    background: #5d701a;
+    min-height: 150px;
+    color: #FFFFFF;
+    padding: 10px;
+    -webkit-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+}
+
+    .dasboard-Colegio h2 {
+        width: 90%;
+        padding: 10px;
+        text-align-last: center;
+        font-size: 25px;
+    }
