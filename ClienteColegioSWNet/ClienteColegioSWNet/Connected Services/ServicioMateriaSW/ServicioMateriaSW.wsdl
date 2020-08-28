@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://serviciosWeb/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioMateriaSW" targetNamespace="http://serviciosWeb/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?xsd=1" namespace="http://serviciosWeb/" />
+    </xsd:schema>
+  </types>
+  <message name="darMateriaPorCodigo">
+    <part name="parameters" element="tns:darMateriaPorCodigo" />
+  </message>
+  <message name="darMateriaPorCodigoResponse">
+    <part name="parameters" element="tns:darMateriaPorCodigoResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="darMateriasPorGrado">
+    <part name="parameters" element="tns:darMateriasPorGrado" />
+  </message>
+  <message name="darMateriasPorGradoResponse">
+    <part name="parameters" element="tns:darMateriasPorGradoResponse" />
+  </message>
+  <message name="darMaterias">
+    <part name="parameters" element="tns:darMaterias" />
+  </message>
+  <message name="darMateriasResponse">
+    <part name="parameters" element="tns:darMateriasResponse" />
+  </message>
+  <portType name="ServicioMateriaSW">
+    <operation name="darMateriaPorCodigo">
+      <input wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigoRequest" message="tns:darMateriaPorCodigo" />
+      <output wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigoResponse" message="tns:darMateriaPorCodigoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMateriasPorGrado">
+      <input wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriasPorGradoRequest" message="tns:darMateriasPorGrado" />
+      <output wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriasPorGradoResponse" message="tns:darMateriasPorGradoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriasPorGrado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMaterias">
+      <input wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriasRequest" message="tns:darMaterias" />
+      <output wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMateriasResponse" message="tns:darMateriasResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMateriaSW/darMaterias/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ServicioMateriaSWPortBinding" type="tns:ServicioMateriaSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="darMateriaPorCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMateriasPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMaterias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ServicioMateriaSW">
+    <port name="ServicioMateriaSWPort" binding="tns:ServicioMateriaSWPortBinding">
+      <soap:address location="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort" />
+    </port>
+  </service>
+</definitions>

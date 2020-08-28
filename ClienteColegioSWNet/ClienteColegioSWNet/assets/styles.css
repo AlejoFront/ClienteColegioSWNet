@@ -4,8 +4,20 @@
     text-align:center;
 
 }
-.cont-forms{
-    width:65%;
+.cnt {
+    width: 100% !important;
+    display:flex;
+    justify-content: center;
+    margin-top: 5% !important;
+}
+
+.cont-tb-list{
+    width: 85% !important;
+    margin:auto !important;
+    margin-top: 5% !important;
+}
+.cont-forms {
+    width: 65%;
     margin: auto;
 }
 .cont-dashboard {

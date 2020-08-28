@@ -21,8 +21,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Estudiantes
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Agregar Estudiante</a>
-                    <a class="dropdown-item" href="#">Listar Estudiantes</a>
+                    <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
+                    <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
                     <a class="dropdown-item" href="#">Buscar Estudiantes</a>
                     <a class="dropdown-item" href="#">Eliminar Estudiantes</a>
                 </div>
@@ -50,7 +50,7 @@
 
     <h2 class="title">Agregar Estudiante</h2>
     <div class="cont-forms">
-        <form id="form1" action="" runat="server">
+        <form id="form1"  runat="server">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control" placeholder="Nombre"></asp:TextBox>
@@ -62,7 +62,8 @@
             </div>
             <div class="form-group">
                 <label for="fechaNacimiento">Fecha Nacimiento:</label>
-                <input type="date" class="form-control" id="txtdate" runat="server"/>
+                
+                <input id="txtdate" type="date" class="form-control" runat="server"/>
             </div>
 
 

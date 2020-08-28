@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://serviciosWeb/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioEstudianteSW" targetNamespace="http://serviciosWeb/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?xsd=1" namespace="http://serviciosWeb/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarEstudiante">
+    <part name="parameters" element="tns:insertarEstudiante" />
+  </message>
+  <message name="insertarEstudianteResponse">
+    <part name="parameters" element="tns:insertarEstudianteResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="eliminarEstudiante">
+    <part name="parameters" element="tns:eliminarEstudiante" />
+  </message>
+  <message name="eliminarEstudianteResponse">
+    <part name="parameters" element="tns:eliminarEstudianteResponse" />
+  </message>
+  <message name="actualizarEstudiante">
+    <part name="parameters" element="tns:actualizarEstudiante" />
+  </message>
+  <message name="actualizarEstudianteResponse">
+    <part name="parameters" element="tns:actualizarEstudianteResponse" />
+  </message>
+  <message name="darEstudiantes">
+    <part name="parameters" element="tns:darEstudiantes" />
+  </message>
+  <message name="darEstudiantesResponse">
+    <part name="parameters" element="tns:darEstudiantesResponse" />
+  </message>
+  <message name="cantidadEstudiantesPorGenero">
+    <part name="parameters" element="tns:cantidadEstudiantesPorGenero" />
+  </message>
+  <message name="cantidadEstudiantesPorGeneroResponse">
+    <part name="parameters" element="tns:cantidadEstudiantesPorGeneroResponse" />
+  </message>
+  <message name="darEstudiantesPorNombre">
+    <part name="parameters" element="tns:darEstudiantesPorNombre" />
+  </message>
+  <message name="darEstudiantesPorNombreResponse">
+    <part name="parameters" element="tns:darEstudiantesPorNombreResponse" />
+  </message>
+  <message name="buscarEstudiante">
+    <part name="parameters" element="tns:buscarEstudiante" />
+  </message>
+  <message name="buscarEstudianteResponse">
+    <part name="parameters" element="tns:buscarEstudianteResponse" />
+  </message>
+  <message name="darGradoEstudiante">
+    <part name="parameters" element="tns:darGradoEstudiante" />
+  </message>
+  <message name="darGradoEstudianteResponse">
+    <part name="parameters" element="tns:darGradoEstudianteResponse" />
+  </message>
+  <portType name="ServicioEstudianteSW">
+    <operation name="insertarEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteRequest" message="tns:insertarEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteResponse" message="tns:insertarEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/eliminarEstudianteRequest" message="tns:eliminarEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/eliminarEstudianteResponse" message="tns:eliminarEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/eliminarEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/actualizarEstudianteRequest" message="tns:actualizarEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/actualizarEstudianteResponse" message="tns:actualizarEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/actualizarEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darEstudiantes">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesRequest" message="tns:darEstudiantes" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesResponse" message="tns:darEstudiantesResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantes/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="cantidadEstudiantesPorGenero">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGeneroRequest" message="tns:cantidadEstudiantesPorGenero" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGeneroResponse" message="tns:cantidadEstudiantesPorGeneroResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGenero/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darEstudiantesPorNombre">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesPorNombreRequest" message="tns:darEstudiantesPorNombre" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesPorNombreResponse" message="tns:darEstudiantesPorNombreResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesPorNombre/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="buscarEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteRequest" message="tns:buscarEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteResponse" message="tns:buscarEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darGradoEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteRequest" message="tns:darGradoEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteResponse" message="tns:darGradoEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ServicioEstudianteSWPortBinding" type="tns:ServicioEstudianteSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darEstudiantes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cantidadEstudiantesPorGenero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darEstudiantesPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darGradoEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ServicioEstudianteSW">
+    <port name="ServicioEstudianteSWPort" binding="tns:ServicioEstudianteSWPortBinding">
+      <soap:address location="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort" />
+    </port>
+  </service>
+</definitions>
