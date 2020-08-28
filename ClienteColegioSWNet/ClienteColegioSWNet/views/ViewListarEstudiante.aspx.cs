@@ -17,13 +17,13 @@ namespace ClienteColegioSWNet.views
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            ServicioEstudianteSW.ServicioEstudianteSWClient servicio;
+            
             ServicioEstudianteSW.estudiante[] estudiantes;
 
             DataTable dt = new System.Data.DataTable();
             DataRow dr;
 
-            servicio = new ServicioEstudianteSW.ServicioEstudianteSWClient();
+            
 
 
             dt.Columns.Add(new DataColumn("Nombre(s)"));
@@ -37,7 +37,7 @@ namespace ClienteColegioSWNet.views
 
             try
             {
-                estudiantes = servicio.darEstudiantes();
+                estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantes();
 
                 for (int i = 0; i  < estudiantes.Length; i++)
                 {

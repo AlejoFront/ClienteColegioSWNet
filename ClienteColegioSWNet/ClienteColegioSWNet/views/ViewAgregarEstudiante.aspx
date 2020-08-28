@@ -23,7 +23,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
                     <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
-                    <a class="dropdown-item" href="#">Buscar Estudiantes</a>
+                    <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
                     <a class="dropdown-item" href="#">Eliminar Estudiantes</a>
                 </div>
             </li>

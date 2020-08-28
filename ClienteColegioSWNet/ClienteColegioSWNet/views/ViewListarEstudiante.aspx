@@ -25,7 +25,7 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
         <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
-        <a class="dropdown-item" href="#">Buscar Estudiantes</a>
+        <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
         <a class="dropdown-item" href="#">Eliminar Estudiantes</a>
       </div>
     </li>
@@ -60,7 +60,9 @@
         </div>
 
         <div class="cont-tb-list">
-            <asp:GridView ID="grilla" runat="server" CssClass="table table-dark table-striped"></asp:GridView>
+            <asp:GridView ID="grilla" runat="server" CssClass="table table-dark table-striped">
+
+            </asp:GridView>
         </div>
 
     </form>

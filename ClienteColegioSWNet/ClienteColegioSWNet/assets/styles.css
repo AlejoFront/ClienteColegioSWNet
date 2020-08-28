@@ -28,23 +28,37 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.cont-search {
+    display:flex;
+    flex-direction:column;
+    width: 65%;
+    margin: auto;
+}
 .dasboard {
     width: 40%;
     margin: 2%;
 }
-
-.dasboard-student {
-    display: flex;
-    justify-content: center;
-    background: #4d6acb;
-    min-height: 150px;
-    color: #FFFFFF;
-    padding: 10px;
-    -webkit-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
-    box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+.grp-srh{
+    display:flex;
 }
+
+    .grp-srh > input[type="text"] {
+        width: 75% !important;
+        margin-right: 6px;
+    }
+
+
+    .dasboard-student {
+        display: flex;
+        justify-content: center;
+        background: #4d6acb;
+        min-height: 150px;
+        color: #FFFFFF;
+        padding: 10px;
+        -webkit-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+        box-shadow: -7px 10px 6px 0px rgba(0,0,0,0.75);
+    }
 
     .dasboard-student h2 {
         width: 90%;

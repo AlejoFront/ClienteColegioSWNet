@@ -17,10 +17,10 @@ namespace ClienteColegioSWNet.views
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            ServicioEstudianteSW.ServicioEstudianteSWClient servicio;
+            
             ServicioEstudianteSW.estudiante est;
-
-            servicio = new ServicioEstudianteSW.ServicioEstudianteSWClient();
+            
+            
             est = new ServicioEstudianteSW.estudiante();
 
             String nombre = txtnombre.Text;
@@ -47,7 +47,7 @@ namespace ClienteColegioSWNet.views
 
             try
             {
-                servicio.insertarEstudiante(est);
+                model.ServicioLocalEstudiante.getInstance().insertarEstudiante(est);
 
                 txtnombre.Text = "";
                 txtapellido.Text = "";

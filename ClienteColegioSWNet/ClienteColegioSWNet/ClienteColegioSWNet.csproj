@@ -131,6 +131,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="views\ViewAgregarEstudiante.aspx" />
+    <Content Include="views\ViewBuscarEstudiante.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
     <Content Include="views\ViewPrincipal.aspx" />
     <Content Include="Web.config" />
@@ -146,6 +147,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="model\ServicioLocalEstudiante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\ViewAgregarEstudiante.aspx.cs">
       <DependentUpon>ViewAgregarEstudiante.aspx</DependentUpon>
@@ -153,6 +155,13 @@
     </Compile>
     <Compile Include="views\ViewAgregarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewAgregarEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\ViewBuscarEstudiante.aspx.cs">
+      <DependentUpon>ViewBuscarEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewBuscarEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewBuscarEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\ViewListarEstudiante.aspx.cs">
       <DependentUpon>ViewListarEstudiante.aspx</DependentUpon>
