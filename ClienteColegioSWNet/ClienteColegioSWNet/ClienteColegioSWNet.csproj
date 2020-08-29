@@ -120,8 +120,8 @@
     <Content Include="Connected Services\ServicioMateriaSW\ClienteColegioSWNet.ServicioMateriaSW.materia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSW.wsdl" />
-    <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSWPort.xsd">
+    <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSW1.wsdl" />
+    <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSWPort1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioMateriaSW\configuration91.svcinfo" />
@@ -131,6 +131,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="views\ViewAgregarEstudiante.aspx" />
+    <Content Include="views\ViewBorrarEstudiante.aspx" />
     <Content Include="views\ViewBuscarEstudiante.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
     <Content Include="views\ViewPrincipal.aspx" />
@@ -156,6 +157,13 @@
     <Compile Include="views\ViewAgregarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewAgregarEstudiante.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\ViewBorrarEstudiante.aspx.cs">
+      <DependentUpon>ViewBorrarEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewBorrarEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewBorrarEstudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="views\ViewBuscarEstudiante.aspx.cs">
       <DependentUpon>ViewBuscarEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,8 +187,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSW.wsdl" />
-    <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSWPort.xsd">
+    <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSW1.wsdl" />
+    <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSWPort1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

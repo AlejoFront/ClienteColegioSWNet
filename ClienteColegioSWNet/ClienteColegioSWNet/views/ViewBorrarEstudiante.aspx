@@ -1,15 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewBuscarEstudiante.aspx.cs" Inherits="ClienteColegioSWNet.views.ViewBuscarEstudiante" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewBorrarEstudiante.aspx.cs" Inherits="ClienteColegioSWNet.views.ViewBorrarEstudiante" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Buscar Estudiante  | Colegio</title>
+    <title>Eliminar Estudiantes | Colegio</title>
     <link rel="stylesheet" href="../assets/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Colegio</a>
@@ -23,7 +24,8 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
                     <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
-                    <a class="dropdown-item" href="ViewBorrarEstudiante.aspx">Eliminar Estudiantes</a>
+                    <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
+
                 </div>
             </li>
 
@@ -47,33 +49,30 @@
         </ul>
     </nav>
 
-    <h1 class="title">Buscar Estudiante</h1>
+    <h1 class="title">Listado de estudiantes</h1>
+
     <form id="form1" runat="server">
 
-
         <div class="cont-search">
-            <label for="search">Nombre del estudiante:</label>
+            <label for="search">Documento del estudiante:</label>
             <div class="grp-srh">
                 <asp:TextBox ID="txtnombre" runat="server" class="form-control"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="Buscar" class="btn btn-success" OnClick="Button1_Click1"/>
+            
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click"/>
             </div>
         </div>
 
-
         <div class="cont-tb-list">
             <asp:GridView ID="grilla" runat="server" CssClass="table table-dark table-striped">
-
             </asp:GridView>
         </div>
-        
+
     </form>
-
-
 
 
     <script src="../assets/jquery-3.2.1.slim.min.js"></script>
     <script src="../assets/popper.min.js"></script>
     <script src="../assets/bootstrap.min.js"></script>
     <script src="../assets/JavaScript.js"></script>
+
 </body>
-</html>

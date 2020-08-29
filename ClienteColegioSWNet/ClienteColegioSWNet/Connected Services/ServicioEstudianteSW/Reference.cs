@@ -205,14 +205,25 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://serviciosWeb/", ConfigurationName="ServicioEstudianteSW.ServicioEstudianteSW")]
     public interface ServicioEstudianteSW {
         
-        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudiante/Fault/Exception", Name="Exception")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudiante/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse buscarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteResponse")]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteResponse")]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> buscarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudiante/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse darGradoEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteResponse")]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> darGradoEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/eliminarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/eliminarEstudianteResponse")]
@@ -235,16 +246,6 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
         System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.actualizarEstudianteResponse> actualizarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.actualizarEstudianteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantes/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse darEstudiantes(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesResponse")]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> darEstudiantesAsync(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGeneroRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGeneroResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/cantidadEstudiantesPorGenero/Fault/Excep" +
             "tion", Name="Exception")]
@@ -265,41 +266,40 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
         [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesPorNombreRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesPorNombreResponse")]
         System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesPorNombreResponse> darEstudiantesPorNombreAsync(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesPorNombreRequest request);
         
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudiante/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/insertarEstudianteResponse")]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request);
+        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudiante/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantes/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse buscarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request);
+        ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse darEstudiantes(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/buscarEstudianteResponse")]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> buscarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioEstudianteSW.Exception), Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudiante/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse darGradoEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darGradoEstudianteResponse")]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> darGradoEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesRequest", ReplyAction="http://serviciosWeb/ServicioEstudianteSW/darEstudiantesResponse")]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> darEstudiantesAsync(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class insertarEstudianteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class buscarEstudianteRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0;
+        public string arg0;
         
-        public insertarEstudianteRequest() {
+        public buscarEstudianteRequest() {
         }
         
-        public insertarEstudianteRequest(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
+        public buscarEstudianteRequest(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -307,10 +307,54 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class insertarEstudianteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class buscarEstudianteResponse {
         
-        public insertarEstudianteResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante @return;
+        
+        public buscarEstudianteResponse() {
+        }
+        
+        public buscarEstudianteResponse(ClienteColegioSWNet.ServicioEstudianteSW.estudiante @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darGradoEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darGradoEstudianteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public darGradoEstudianteRequest() {
+        }
+        
+        public darGradoEstudianteRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darGradoEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darGradoEstudianteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public darGradoEstudianteResponse() {
+        }
+        
+        public darGradoEstudianteResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -394,34 +438,6 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darEstudiantes", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darEstudiantesRequest {
-        
-        public darEstudiantesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darEstudiantesResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darEstudiantesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] @return;
-        
-        public darEstudiantesResponse() {
-        }
-        
-        public darEstudiantesResponse(ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="cantidadEstudiantesPorGenero", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
     public partial class cantidadEstudiantesPorGeneroRequest {
         
@@ -486,17 +502,17 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class buscarEstudianteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class insertarEstudianteRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
+        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0;
         
-        public buscarEstudianteRequest() {
+        public insertarEstudianteRequest() {
         }
         
-        public buscarEstudianteRequest(string arg0) {
+        public insertarEstudianteRequest(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
             this.arg0 = arg0;
         }
     }
@@ -504,53 +520,37 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class buscarEstudianteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class insertarEstudianteResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante @return;
-        
-        public buscarEstudianteResponse() {
-        }
-        
-        public buscarEstudianteResponse(ClienteColegioSWNet.ServicioEstudianteSW.estudiante @return) {
-            this.@return = @return;
+        public insertarEstudianteResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darGradoEstudiante", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darGradoEstudianteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darEstudiantes", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darEstudiantesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public darGradoEstudianteRequest() {
-        }
-        
-        public darGradoEstudianteRequest(string arg0) {
-            this.arg0 = arg0;
+        public darEstudiantesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darGradoEstudianteResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darGradoEstudianteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darEstudiantesResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darEstudiantesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] @return;
         
-        public darGradoEstudianteResponse() {
+        public darEstudiantesResponse() {
         }
         
-        public darGradoEstudianteResponse(int @return) {
+        public darEstudiantesResponse(ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] @return) {
             this.@return = @return;
         }
     }
@@ -583,25 +583,49 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request) {
-            return base.Channel.insertarEstudiante(request);
+        ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.buscarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request) {
+            return base.Channel.buscarEstudiante(request);
         }
         
-        public void insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest();
+        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante buscarEstudiante(string arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest();
             inValue.arg0 = arg0;
-            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).insertarEstudiante(inValue);
+            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).buscarEstudiante(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request) {
-            return base.Channel.insertarEstudianteAsync(request);
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.buscarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request) {
+            return base.Channel.buscarEstudianteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest();
+        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> buscarEstudianteAsync(string arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest();
             inValue.arg0 = arg0;
-            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).insertarEstudianteAsync(inValue);
+            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).buscarEstudianteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darGradoEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request) {
+            return base.Channel.darGradoEstudiante(request);
+        }
+        
+        public int darGradoEstudiante(string arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest();
+            inValue.arg0 = arg0;
+            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darGradoEstudiante(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darGradoEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request) {
+            return base.Channel.darGradoEstudianteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> darGradoEstudianteAsync(string arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest();
+            inValue.arg0 = arg0;
+            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darGradoEstudianteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -653,27 +677,6 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darEstudiantes(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request) {
-            return base.Channel.darEstudiantes(request);
-        }
-        
-        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] darEstudiantes() {
-            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest();
-            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darEstudiantes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darEstudiantesAsync(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request) {
-            return base.Channel.darEstudiantesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> darEstudiantesAsync() {
-            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest();
-            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darEstudiantesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ClienteColegioSWNet.ServicioEstudianteSW.cantidadEstudiantesPorGeneroResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.cantidadEstudiantesPorGenero(ClienteColegioSWNet.ServicioEstudianteSW.cantidadEstudiantesPorGeneroRequest request) {
             return base.Channel.cantidadEstudiantesPorGenero(request);
         }
@@ -718,49 +721,46 @@ namespace ClienteColegioSWNet.ServicioEstudianteSW {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.buscarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request) {
-            return base.Channel.buscarEstudiante(request);
+        ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request) {
+            return base.Channel.insertarEstudiante(request);
         }
         
-        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante buscarEstudiante(string arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest();
+        public void insertarEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest();
             inValue.arg0 = arg0;
-            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).buscarEstudiante(inValue);
+            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).insertarEstudiante(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest request) {
+            return base.Channel.insertarEstudianteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteResponse> insertarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.estudiante arg0) {
+            ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.insertarEstudianteRequest();
+            inValue.arg0 = arg0;
+            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).insertarEstudianteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darEstudiantes(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request) {
+            return base.Channel.darEstudiantes(request);
+        }
+        
+        public ClienteColegioSWNet.ServicioEstudianteSW.estudiante[] darEstudiantes() {
+            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest();
+            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darEstudiantes(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.buscarEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest request) {
-            return base.Channel.buscarEstudianteAsync(request);
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darEstudiantesAsync(ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest request) {
+            return base.Channel.darEstudiantesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteResponse> buscarEstudianteAsync(string arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.buscarEstudianteRequest();
-            inValue.arg0 = arg0;
-            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).buscarEstudianteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darGradoEstudiante(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request) {
-            return base.Channel.darGradoEstudiante(request);
-        }
-        
-        public int darGradoEstudiante(string arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest();
-            inValue.arg0 = arg0;
-            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse retVal = ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darGradoEstudiante(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW.darGradoEstudianteAsync(ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest request) {
-            return base.Channel.darGradoEstudianteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteResponse> darGradoEstudianteAsync(string arg0) {
-            ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darGradoEstudianteRequest();
-            inValue.arg0 = arg0;
-            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darGradoEstudianteAsync(inValue);
+        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesResponse> darEstudiantesAsync() {
+            ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest inValue = new ClienteColegioSWNet.ServicioEstudianteSW.darEstudiantesRequest();
+            return ((ClienteColegioSWNet.ServicioEstudianteSW.ServicioEstudianteSW)(this)).darEstudiantesAsync(inValue);
         }
     }
 }

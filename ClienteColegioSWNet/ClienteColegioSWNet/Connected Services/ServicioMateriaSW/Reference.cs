@@ -122,6 +122,16 @@ namespace ClienteColegioSWNet.ServicioMateriaSW {
     public interface ServicioMateriaSW {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriasRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioMateriaSW.Exception), Action="http://serviciosWeb/ServicioMateriaSW/darMaterias/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse darMaterias(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriasRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriasResponse")]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> darMateriasAsync(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigoRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioMateriaSW.Exception), Action="http://serviciosWeb/ServicioMateriaSW/darMateriaPorCodigo/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -140,16 +150,34 @@ namespace ClienteColegioSWNet.ServicioMateriaSW {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriasPorGradoRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriasPorGradoResponse")]
         System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasPorGradoResponse> darMateriasPorGradoAsync(ClienteColegioSWNet.ServicioMateriaSW.darMateriasPorGradoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darMaterias", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darMateriasRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriasRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClienteColegioSWNet.ServicioMateriaSW.Exception), Action="http://serviciosWeb/ServicioMateriaSW/darMaterias/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse darMaterias(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request);
+        public darMateriasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darMateriasResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    public partial class darMateriasResponse {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioMateriaSW/darMateriasRequest", ReplyAction="http://serviciosWeb/ServicioMateriaSW/darMateriasResponse")]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> darMateriasAsync(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ClienteColegioSWNet.ServicioMateriaSW.materia[] @return;
+        
+        public darMateriasResponse() {
+        }
+        
+        public darMateriasResponse(ClienteColegioSWNet.ServicioMateriaSW.materia[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -224,34 +252,6 @@ namespace ClienteColegioSWNet.ServicioMateriaSW {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darMaterias", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darMateriasRequest {
-        
-        public darMateriasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darMateriasResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class darMateriasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ClienteColegioSWNet.ServicioMateriaSW.materia[] @return;
-        
-        public darMateriasResponse() {
-        }
-        
-        public darMateriasResponse(ClienteColegioSWNet.ServicioMateriaSW.materia[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioMateriaSWChannel : ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW, System.ServiceModel.IClientChannel {
     }
@@ -277,6 +277,27 @@ namespace ClienteColegioSWNet.ServicioMateriaSW {
         
         public ServicioMateriaSWClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW.darMaterias(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request) {
+            return base.Channel.darMaterias(request);
+        }
+        
+        public ClienteColegioSWNet.ServicioMateriaSW.materia[] darMaterias() {
+            ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest inValue = new ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest();
+            ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse retVal = ((ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW)(this)).darMaterias(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW.darMateriasAsync(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request) {
+            return base.Channel.darMateriasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> darMateriasAsync() {
+            ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest inValue = new ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest();
+            return ((ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW)(this)).darMateriasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -323,27 +344,6 @@ namespace ClienteColegioSWNet.ServicioMateriaSW {
             ClienteColegioSWNet.ServicioMateriaSW.darMateriasPorGradoRequest inValue = new ClienteColegioSWNet.ServicioMateriaSW.darMateriasPorGradoRequest();
             inValue.arg0 = arg0;
             return ((ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW)(this)).darMateriasPorGradoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW.darMaterias(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request) {
-            return base.Channel.darMaterias(request);
-        }
-        
-        public ClienteColegioSWNet.ServicioMateriaSW.materia[] darMaterias() {
-            ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest inValue = new ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest();
-            ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse retVal = ((ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW)(this)).darMaterias(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW.darMateriasAsync(ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest request) {
-            return base.Channel.darMateriasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ClienteColegioSWNet.ServicioMateriaSW.darMateriasResponse> darMateriasAsync() {
-            ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest inValue = new ClienteColegioSWNet.ServicioMateriaSW.darMateriasRequest();
-            return ((ClienteColegioSWNet.ServicioMateriaSW.ServicioMateriaSW)(this)).darMateriasAsync(inValue);
         }
     }
 }

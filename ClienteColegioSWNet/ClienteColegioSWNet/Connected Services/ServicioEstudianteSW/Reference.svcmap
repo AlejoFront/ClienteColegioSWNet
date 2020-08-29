@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioEstudianteSWPort.xsd" MetadataType="Schema" ID="4485360d-e49a-4065-9290-ca4e98883816" SourceId="1" SourceUrl="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?xsd=1" />
-    <MetadataFile FileName="ServicioEstudianteSW.wsdl" MetadataType="Wsdl" ID="22797b65-9835-42ad-8db3-9f05d71d7791" SourceId="1" SourceUrl="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?WSDL" />
+    <MetadataFile FileName="ServicioEstudianteSWPort1.xsd" MetadataType="Schema" ID="7616b156-7d9b-42bf-81fc-176b77fa6d72" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?xsd=1" />
+    <MetadataFile FileName="ServicioEstudianteSW1.wsdl" MetadataType="Wsdl" ID="20562fd3-12a7-4e5a-814b-5784cce6172a" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioEstudianteSWPort?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

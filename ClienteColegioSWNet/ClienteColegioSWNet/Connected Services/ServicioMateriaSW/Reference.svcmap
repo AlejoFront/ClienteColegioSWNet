@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioMateriaSWPort.xsd" MetadataType="Schema" ID="565e139e-bab8-4bb1-b05a-30a2205d970b" SourceId="1" SourceUrl="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?xsd=1" />
-    <MetadataFile FileName="ServicioMateriaSW.wsdl" MetadataType="Wsdl" ID="f93c8ea1-b34d-448a-8908-507a38a81b58" SourceId="1" SourceUrl="http://localhost:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?WSDL" />
+    <MetadataFile FileName="ServicioMateriaSW1.wsdl" MetadataType="Wsdl" ID="17b0cca8-fbc4-4a33-b731-cc80e8b97215" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?WSDL" />
+    <MetadataFile FileName="ServicioMateriaSWPort1.xsd" MetadataType="Schema" ID="d7d24cbe-cdac-4e9f-891a-b2c90f83a607" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMateriaSWPort?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

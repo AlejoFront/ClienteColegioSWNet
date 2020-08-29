@@ -8,22 +8,21 @@ using System.Web.UI.WebControls;
 
 namespace ClienteColegioSWNet.views
 {
-    public partial class ViewListarEstudiante : System.Web.UI.Page
+    public partial class ViewBorrarEstudiante : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            
             ServicioEstudianteSW.estudiante[] estudiantes;
 
             DataTable dt = new System.Data.DataTable();
             DataRow dr;
 
-            
+            String nombre = txtnombre.Text;
 
 
             dt.Columns.Add(new DataColumn("Nombre(s)"));
@@ -37,9 +36,10 @@ namespace ClienteColegioSWNet.views
 
             try
             {
-                estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantes();
+                estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantesPorNombre(nombre);
 
-                for (int i = 0; i  < estudiantes.Length; i++)
+
+                for (int i = 0; i < estudiantes.Length; i++)
                 {
 
                     dr = dt.NewRow();
@@ -48,13 +48,14 @@ namespace ClienteColegioSWNet.views
                     dr["Fecha Nacimiento"] = estudiantes[i].fechaNacimiento;
                     dr["Documeto  Identificacion"] = estudiantes[i].documentoIdentificacion;
 
-                    dr["Genero"] = (estudiantes[i].genero == 1)?"Mujer":"Hombre";
+                    dr["Genero"] = (estudiantes[i].genero == 1) ? "Mujer" : "Hombre";
 
                     dr["Eps"] = estudiantes[i].eps;
                     dr["Direccion"] = estudiantes[i].direccion;
                     dr["Email"] = estudiantes[i].correo;
                     dt.Rows.Add(dr);
                 }
+
             }
             catch
             {
