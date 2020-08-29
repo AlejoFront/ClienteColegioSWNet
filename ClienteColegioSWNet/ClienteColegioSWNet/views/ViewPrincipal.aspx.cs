@@ -12,6 +12,20 @@ namespace ClienteColegioSWNet.views
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+            ServicioExtraSW.ServiciosExtraSWClient ext;
+
+            ext = new ServicioExtraSW.ServiciosExtraSWClient();
+
+            int cantMaterias = ext.cantidadMateriasRegistradas();
+
+            int cantEst = ext.cantidadEstudiantesRegistrados();
+            int cantMatri = ext.cantidadMatriculasRegistradas();
+
+
+            lblEst.Text = Convert.ToString(cantEst);
+            lblmaterias.Text = Convert.ToString(cantMaterias);
+            lblmatriculas.Text = Convert.ToString(cantMatri);
         }
     }
 }

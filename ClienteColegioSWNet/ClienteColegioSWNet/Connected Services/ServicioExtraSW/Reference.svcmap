@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3e41e9d7-4b15-4cd0-90ef-3a5285875d5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServiciosExtraSWPort?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiciosExtraSW.wsdl" MetadataType="Wsdl" ID="aa96258b-e1ee-466a-b08a-8cbdb87d35b0" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServiciosExtraSWPort?WSDL" />
+    <MetadataFile FileName="ServiciosExtraSWPort.xsd" MetadataType="Schema" ID="29bf4d65-d7f4-4129-a671-51ad0f2d0b70" SourceId="1" SourceUrl="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServiciosExtraSWPort?xsd=1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

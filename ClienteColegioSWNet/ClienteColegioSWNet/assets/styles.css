@@ -120,3 +120,13 @@
     display:flex;
     flex-direction: column;
 }
+
+.lb{
+    width: 100%;
+    text-align:center;
+    font-size: 40px;
+}
+
+.lbt{
+    font-size: 28px;
+}

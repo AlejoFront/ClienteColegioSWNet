@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://serviciosWeb/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServiciosExtraSW" targetNamespace="http://serviciosWeb/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServiciosExtraSWPort?xsd=1" namespace="http://serviciosWeb/" />
+    </xsd:schema>
+  </types>
+  <message name="darCantidadMateriasPorGradoCursando">
+    <part name="parameters" element="tns:darCantidadMateriasPorGradoCursando" />
+  </message>
+  <message name="darCantidadMateriasPorGradoCursandoResponse">
+    <part name="parameters" element="tns:darCantidadMateriasPorGradoCursandoResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="cantidadEstudiantesRegistrados">
+    <part name="parameters" element="tns:cantidadEstudiantesRegistrados" />
+  </message>
+  <message name="cantidadEstudiantesRegistradosResponse">
+    <part name="parameters" element="tns:cantidadEstudiantesRegistradosResponse" />
+  </message>
+  <message name="cantidadMateriasRegistradas">
+    <part name="parameters" element="tns:cantidadMateriasRegistradas" />
+  </message>
+  <message name="cantidadMateriasRegistradasResponse">
+    <part name="parameters" element="tns:cantidadMateriasRegistradasResponse" />
+  </message>
+  <message name="cantidadMatriculasRegistradas">
+    <part name="parameters" element="tns:cantidadMatriculasRegistradas" />
+  </message>
+  <message name="cantidadMatriculasRegistradasResponse">
+    <part name="parameters" element="tns:cantidadMatriculasRegistradasResponse" />
+  </message>
+  <portType name="ServiciosExtraSW">
+    <operation name="darCantidadMateriasPorGradoCursando">
+      <input wsam:Action="http://serviciosWeb/ServiciosExtraSW/darCantidadMateriasPorGradoCursandoRequest" message="tns:darCantidadMateriasPorGradoCursando" />
+      <output wsam:Action="http://serviciosWeb/ServiciosExtraSW/darCantidadMateriasPorGradoCursandoResponse" message="tns:darCantidadMateriasPorGradoCursandoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServiciosExtraSW/darCantidadMateriasPorGradoCursando/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="cantidadEstudiantesRegistrados">
+      <input wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadEstudiantesRegistradosRequest" message="tns:cantidadEstudiantesRegistrados" />
+      <output wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadEstudiantesRegistradosResponse" message="tns:cantidadEstudiantesRegistradosResponse" />
+    </operation>
+    <operation name="cantidadMateriasRegistradas">
+      <input wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadMateriasRegistradasRequest" message="tns:cantidadMateriasRegistradas" />
+      <output wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadMateriasRegistradasResponse" message="tns:cantidadMateriasRegistradasResponse" />
+    </operation>
+    <operation name="cantidadMatriculasRegistradas">
+      <input wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadMatriculasRegistradasRequest" message="tns:cantidadMatriculasRegistradas" />
+      <output wsam:Action="http://serviciosWeb/ServiciosExtraSW/cantidadMatriculasRegistradasResponse" message="tns:cantidadMatriculasRegistradasResponse" />
+    </operation>
+  </portType>
+  <binding name="ServiciosExtraSWPortBinding" type="tns:ServiciosExtraSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="darCantidadMateriasPorGradoCursando">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cantidadEstudiantesRegistrados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cantidadMateriasRegistradas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cantidadMatriculasRegistradas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServiciosExtraSW">
+    <port name="ServiciosExtraSWPort" binding="tns:ServiciosExtraSWPortBinding">
+      <soap:address location="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServiciosExtraSWPort" />
+    </port>
+  </service>
+</definitions>

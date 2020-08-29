@@ -54,22 +54,26 @@
 
     <h1 class="title">Contador de regisros</h1>
 
-    <div class="cont-dashboard">
-        <div class="dasboard dasboard-student">
-            <h2>Estudiantes registrados: </h2>
-            <h1>8</h1>
-        </div>
+    
+        <form id="formdash"  runat="server">
+            <div class="cont-dashboard">
+                <div class="dasboard dasboard-student">
+                    <asp:Label ID="Label1" runat="server" Text="Estudiantes registrados:" CssClass="lb lbt"></asp:Label>
+                    <asp:Label ID="lblEst" runat="server" CssClass="lb"></asp:Label>
+                </div>
 
-        <div class="dasboard dasboard-Matricula">
-            <h2>Matriculas registradas: </h2>
-            <h1>4</h1>
-        </div>
+                <div class="dasboard dasboard-Matricula">
+                    <asp:Label ID="Label2" runat="server" Text="Matriculas registradas:" CssClass="lb lbt"></asp:Label>
+                    <asp:Label ID="lblmatriculas" runat="server" CssClass="lb"></asp:Label>
+                </div>
 
-        <div class="dasboard dasboard-Colegio">
-            <h2>Materias registradas: </h2>
-            <h1>6</h1>
-        </div>
-    </div>
+                <div class="dasboard dasboard-Colegio">
+                    <asp:Label ID="Label3" runat="server" Text="Materias registradas:" CssClass="lb lbt"></asp:Label>
+                    <asp:Label ID="lblmaterias" runat="server" CssClass="lb"></asp:Label>
+                </div>
+            </div>
+        </form>
+    
 
 
     <script src="../assets/jquery-3.2.1.slim.min.js"></script>

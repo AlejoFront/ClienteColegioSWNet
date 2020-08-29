@@ -108,6 +108,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\ServicioExtraSW\ClienteColegioSWNet.ServicioExtraSW.cantidadEstudiantesRegistradosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioExtraSW\ClienteColegioSWNet.ServicioExtraSW.cantidadMateriasRegistradasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioExtraSW\ClienteColegioSWNet.ServicioExtraSW.cantidadMatriculasRegistradasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioExtraSW\ClienteColegioSWNet.ServicioExtraSW.darCantidadMateriasPorGradoCursandoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServicioExtraSW\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioExtraSW\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioExtraSW\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ServicioMateriaSW\ClienteColegioSWNet.ServicioMateriaSW.darMateriaPorCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -122,6 +140,10 @@
     </Content>
     <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSW1.wsdl" />
     <None Include="Connected Services\ServicioEstudianteSW\ServicioEstudianteSWPort1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioExtraSW\ServiciosExtraSW.wsdl" />
+    <None Include="Connected Services\ServicioExtraSW\ServiciosExtraSWPort.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioMateriaSW\configuration91.svcinfo" />
@@ -190,6 +212,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioExtraSW\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioMateriaSW\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,6 +228,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="model\ServicioLocalEstudiante.cs" />
+    <Compile Include="model\ServicioLocalExtra.cs" />
     <Compile Include="model\ServicioLocalMatricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\ViewActualizarEstudiante.aspx.cs">
@@ -275,6 +303,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServicioEstudianteSW\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioExtraSW\" />
     <WCFMetadataStorage Include="Connected Services\ServicioMateriaSW\" />
     <WCFMetadataStorage Include="Connected Services\ServicioMatriculaSW\" />
   </ItemGroup>

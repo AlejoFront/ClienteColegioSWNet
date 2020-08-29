@@ -56,7 +56,7 @@ namespace ClienteColegioSWNet.views
                     dt.Rows.Add(dr);
                 }
             }
-            catch
+            catch(Exception ex)
             {
 
             }
