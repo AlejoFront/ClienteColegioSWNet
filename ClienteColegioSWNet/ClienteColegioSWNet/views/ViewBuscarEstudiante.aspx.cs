@@ -60,7 +60,7 @@ namespace ClienteColegioSWNet.views
                 }
 
             }
-            catch
+            catch(Exception ex)
             {
 
             }

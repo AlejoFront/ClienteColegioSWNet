@@ -130,11 +130,58 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.actualizarMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.borrarMatriculaCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMateriasPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMatriculaCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMatriculasEstudianteGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMatriculasEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMatriculasPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darMatriculasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darPazYSalvoEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.darPromedioEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.materia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.matricula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioMatriculaSW\ClienteColegioSWNet.ServicioMatriculaSW.matricularEstudianteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServicioMatriculaSW\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioMatriculaSW\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioMatriculaSW\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="views\ViewActualizarEstudiante.aspx" />
     <Content Include="views\ViewAgregarEstudiante.aspx" />
     <Content Include="views\ViewBorrarEstudiante.aspx" />
     <Content Include="views\ViewBuscarEstudiante.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
     <Content Include="views\ViewPrincipal.aspx" />
+    <Content Include="views\ViewPromedioEstudiante.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,8 +195,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioMatriculaSW\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="model\ServicioLocalEstudiante.cs" />
+    <Compile Include="model\ServicioLocalMatricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\ViewActualizarEstudiante.aspx.cs">
+      <DependentUpon>ViewActualizarEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewActualizarEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewActualizarEstudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="views\ViewAgregarEstudiante.aspx.cs">
       <DependentUpon>ViewAgregarEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,10 +245,21 @@
     <Compile Include="views\ViewPrincipal.aspx.designer.cs">
       <DependentUpon>ViewPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\ViewPromedioEstudiante.aspx.cs">
+      <DependentUpon>ViewPromedioEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewPromedioEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewPromedioEstudiante.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSW1.wsdl" />
     <None Include="Connected Services\ServicioMateriaSW\ServicioMateriaSWPort1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioMatriculaSW\ServicioMatriculaSW.wsdl" />
+    <None Include="Connected Services\ServicioMatriculaSW\ServicioMatriculaSWPort.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -205,6 +276,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServicioEstudianteSW\" />
     <WCFMetadataStorage Include="Connected Services\ServicioMateriaSW\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioMatriculaSW\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

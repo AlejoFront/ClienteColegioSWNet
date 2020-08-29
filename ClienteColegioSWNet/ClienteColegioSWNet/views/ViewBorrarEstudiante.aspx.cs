@@ -77,7 +77,7 @@ namespace ClienteColegioSWNet.views
                 
 
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -111,7 +111,7 @@ namespace ClienteColegioSWNet.views
                 
                 
             }
-            catch
+            catch(Exception ex)
             {
 
             }

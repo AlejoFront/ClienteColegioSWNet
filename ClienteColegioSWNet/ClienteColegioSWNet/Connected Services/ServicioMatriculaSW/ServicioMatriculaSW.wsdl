@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://serviciosWeb/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioMatriculaSW" targetNamespace="http://serviciosWeb/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMatriculaSWPort?xsd=1" namespace="http://serviciosWeb/" />
+    </xsd:schema>
+  </types>
+  <message name="darMatriculas">
+    <part name="parameters" element="tns:darMatriculas" />
+  </message>
+  <message name="darMatriculasResponse">
+    <part name="parameters" element="tns:darMatriculasResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="borrarMatriculaCodigo">
+    <part name="parameters" element="tns:borrarMatriculaCodigo" />
+  </message>
+  <message name="borrarMatriculaCodigoResponse">
+    <part name="parameters" element="tns:borrarMatriculaCodigoResponse" />
+  </message>
+  <message name="matricularEstudiante">
+    <part name="parameters" element="tns:matricularEstudiante" />
+  </message>
+  <message name="matricularEstudianteResponse">
+    <part name="parameters" element="tns:matricularEstudianteResponse" />
+  </message>
+  <message name="darMatriculasEstudiante">
+    <part name="parameters" element="tns:darMatriculasEstudiante" />
+  </message>
+  <message name="darMatriculasEstudianteResponse">
+    <part name="parameters" element="tns:darMatriculasEstudianteResponse" />
+  </message>
+  <message name="actualizarMatricula">
+    <part name="parameters" element="tns:actualizarMatricula" />
+  </message>
+  <message name="actualizarMatriculaResponse">
+    <part name="parameters" element="tns:actualizarMatriculaResponse" />
+  </message>
+  <message name="darPazYSalvoEstudiante">
+    <part name="parameters" element="tns:darPazYSalvoEstudiante" />
+  </message>
+  <message name="darPazYSalvoEstudianteResponse">
+    <part name="parameters" element="tns:darPazYSalvoEstudianteResponse" />
+  </message>
+  <message name="darMatriculaCodigo">
+    <part name="parameters" element="tns:darMatriculaCodigo" />
+  </message>
+  <message name="darMatriculaCodigoResponse">
+    <part name="parameters" element="tns:darMatriculaCodigoResponse" />
+  </message>
+  <message name="darMatriculasPorFecha">
+    <part name="parameters" element="tns:darMatriculasPorFecha" />
+  </message>
+  <message name="darMatriculasPorFechaResponse">
+    <part name="parameters" element="tns:darMatriculasPorFechaResponse" />
+  </message>
+  <message name="darMateriasPorGrado">
+    <part name="parameters" element="tns:darMateriasPorGrado" />
+  </message>
+  <message name="darMateriasPorGradoResponse">
+    <part name="parameters" element="tns:darMateriasPorGradoResponse" />
+  </message>
+  <message name="darPromedioEstudiante">
+    <part name="parameters" element="tns:darPromedioEstudiante" />
+  </message>
+  <message name="darPromedioEstudianteResponse">
+    <part name="parameters" element="tns:darPromedioEstudianteResponse" />
+  </message>
+  <message name="darMatriculasEstudianteGrado">
+    <part name="parameters" element="tns:darMatriculasEstudianteGrado" />
+  </message>
+  <message name="darMatriculasEstudianteGradoResponse">
+    <part name="parameters" element="tns:darMatriculasEstudianteGradoResponse" />
+  </message>
+  <portType name="ServicioMatriculaSW">
+    <operation name="darMatriculas">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasRequest" message="tns:darMatriculas" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasResponse" message="tns:darMatriculasResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculas/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="borrarMatriculaCodigo">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/borrarMatriculaCodigoRequest" message="tns:borrarMatriculaCodigo" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/borrarMatriculaCodigoResponse" message="tns:borrarMatriculaCodigoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/borrarMatriculaCodigo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="matricularEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/matricularEstudianteRequest" message="tns:matricularEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/matricularEstudianteResponse" message="tns:matricularEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/matricularEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMatriculasEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudianteRequest" message="tns:darMatriculasEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudianteResponse" message="tns:darMatriculasEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarMatricula">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/actualizarMatriculaRequest" message="tns:actualizarMatricula" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/actualizarMatriculaResponse" message="tns:actualizarMatriculaResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/actualizarMatricula/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darPazYSalvoEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPazYSalvoEstudianteRequest" message="tns:darPazYSalvoEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPazYSalvoEstudianteResponse" message="tns:darPazYSalvoEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPazYSalvoEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMatriculaCodigo">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculaCodigoRequest" message="tns:darMatriculaCodigo" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculaCodigoResponse" message="tns:darMatriculaCodigoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculaCodigo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMatriculasPorFecha">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasPorFechaRequest" message="tns:darMatriculasPorFecha" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasPorFechaResponse" message="tns:darMatriculasPorFechaResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasPorFecha/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMateriasPorGrado">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMateriasPorGradoRequest" message="tns:darMateriasPorGrado" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMateriasPorGradoResponse" message="tns:darMateriasPorGradoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMateriasPorGrado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darPromedioEstudiante">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPromedioEstudianteRequest" message="tns:darPromedioEstudiante" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPromedioEstudianteResponse" message="tns:darPromedioEstudianteResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darPromedioEstudiante/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="darMatriculasEstudianteGrado">
+      <input wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudianteGradoRequest" message="tns:darMatriculasEstudianteGrado" />
+      <output wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudianteGradoResponse" message="tns:darMatriculasEstudianteGradoResponse" />
+      <fault wsam:Action="http://serviciosWeb/ServicioMatriculaSW/darMatriculasEstudianteGrado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ServicioMatriculaSWPortBinding" type="tns:ServicioMatriculaSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="darMatriculas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="borrarMatriculaCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="matricularEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMatriculasEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darPazYSalvoEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMatriculaCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMatriculasPorFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMateriasPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darPromedioEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="darMatriculasEstudianteGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ServicioMatriculaSW">
+    <port name="ServicioMatriculaSWPort" binding="tns:ServicioMatriculaSWPortBinding">
+      <soap:address location="http://192.168.16.12:7101/AppServidorColegioSW-ProyectoServidorColegioSW-context-root/ServicioMatriculaSWPort" />
+    </port>
+  </service>
+</definitions>

@@ -17,15 +17,19 @@
 
   <!-- Links -->
   <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" href="ViewPrincipal.aspx">Principal</a>
+      </li>
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Estudiantes
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
-        <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
-        <a class="dropdown-item" href="ViewBorrarEstudiante.aspx">Eliminar Estudiantes</a>
+          <a class="dropdown-item" href="ViewAgregarEstudiante.aspx">Agregar Estudiante</a>
+          <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
+          <a class="dropdown-item" href="ViewActualizarEstudiante.aspx">Actualizar Estudiantes</a>
+          <a class="dropdown-item" href="ViewBorrarEstudiante.aspx">Eliminar Estudiantes</a>
       </div>
     </li>
 
