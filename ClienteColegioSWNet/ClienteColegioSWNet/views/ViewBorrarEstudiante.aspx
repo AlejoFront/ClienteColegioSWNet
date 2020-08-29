@@ -56,9 +56,9 @@
         <div class="cont-search">
             <label for="search">Documento del estudiante:</label>
             <div class="grp-srh">
-                <asp:TextBox ID="txtnombre" runat="server" class="form-control"></asp:TextBox>
-            
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click"/>
+                <asp:TextBox ID="txtdocumento" runat="server" class="form-control"></asp:TextBox>
+
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
             </div>
         </div>
 
@@ -66,6 +66,16 @@
             <asp:GridView ID="grilla" runat="server" CssClass="table table-dark table-striped">
             </asp:GridView>
         </div>
+        <div class="cnt">
+            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" OnClick="btnEliminar_Click" Visible="False" />
+        </div>
+        <div class="cnt-alert alert-success">
+            <asp:Label ID="lbldelete" runat="server" Text="Se ha eliminado Correctamente" Visible="False"></asp:Label>
+        </div>
+        <div class="cnt-alert alert-danger">
+            <asp:Label ID="lblerr" runat="server" Text="No se ha eliminado el Estudiante" Visible="False"></asp:Label>
+        </div>
+
 
     </form>
 

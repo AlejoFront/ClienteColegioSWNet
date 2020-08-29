@@ -11,6 +11,16 @@
     margin-top: 5% !important;
 }
 
+
+.cnt-alert {
+    width: 20% !important;
+    display: flex;
+    justify-content: center;
+    margin:auto !important;
+    margin-top: 5% !important;
+    
+}
+
 .cont-tb-list{
     width: 85% !important;
     margin:auto !important;

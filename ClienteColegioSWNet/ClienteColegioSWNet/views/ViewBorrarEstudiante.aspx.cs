@@ -8,8 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace ClienteColegioSWNet.views
 {
+
     public partial class ViewBorrarEstudiante : System.Web.UI.Page
     {
+        private static ServicioEstudianteSW.estudiante estudiante;
+
+        private static DataTable dt = new System.Data.DataTable();
+        private static DataRow dr;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,44 +23,58 @@ namespace ClienteColegioSWNet.views
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            ServicioEstudianteSW.estudiante[] estudiantes;
+            
 
-            DataTable dt = new System.Data.DataTable();
-            DataRow dr;
-
-            String nombre = txtnombre.Text;
+            String documento = txtdocumento.Text;
 
 
-            dt.Columns.Add(new DataColumn("Nombre(s)"));
-            dt.Columns.Add(new DataColumn("Apellidos"));
-            dt.Columns.Add(new DataColumn("Fecha Nacimiento"));
-            dt.Columns.Add(new DataColumn("Documeto  Identificacion"));
-            dt.Columns.Add(new DataColumn("Genero"));
-            dt.Columns.Add(new DataColumn("Eps"));
-            dt.Columns.Add(new DataColumn("Direccion"));
-            dt.Columns.Add(new DataColumn("Email"));
+
 
             try
             {
-                estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantesPorNombre(nombre);
+                estudiante = model.ServicioLocalEstudiante.getInstance().buscarEstudiante(documento);
 
 
-                for (int i = 0; i < estudiantes.Length; i++)
+                if(estudiante != null)
                 {
 
+                    dt.Columns.Add(new DataColumn("Nombre(s)"));
+                    dt.Columns.Add(new DataColumn("Apellidos"));
+                    dt.Columns.Add(new DataColumn("Fecha Nacimiento"));
+                    dt.Columns.Add(new DataColumn("Documeto  Identificacion"));
+                    dt.Columns.Add(new DataColumn("Genero"));
+                    dt.Columns.Add(new DataColumn("Eps"));
+                    dt.Columns.Add(new DataColumn("Direccion"));
+                    dt.Columns.Add(new DataColumn("Email"));
+
                     dr = dt.NewRow();
-                    dr["Nombre(s)"] = estudiantes[i].nombres;
-                    dr["Apellidos"] = estudiantes[i].apellidos;
-                    dr["Fecha Nacimiento"] = estudiantes[i].fechaNacimiento;
-                    dr["Documeto  Identificacion"] = estudiantes[i].documentoIdentificacion;
+                    dr["Nombre(s)"] = estudiante.nombres;
+                    dr["Apellidos"] = estudiante.apellidos;
+                    dr["Fecha Nacimiento"] = estudiante.fechaNacimiento;
+                    dr["Documeto  Identificacion"] = estudiante.documentoIdentificacion;
 
-                    dr["Genero"] = (estudiantes[i].genero == 1) ? "Mujer" : "Hombre";
+                    dr["Genero"] = (estudiante.genero == 1) ? "Mujer" : "Hombre";
 
-                    dr["Eps"] = estudiantes[i].eps;
-                    dr["Direccion"] = estudiantes[i].direccion;
-                    dr["Email"] = estudiantes[i].correo;
+                    dr["Eps"] = estudiante.eps;
+                    dr["Direccion"] = estudiante.direccion;
+                    dr["Email"] = estudiante.correo;
                     dt.Rows.Add(dr);
+
+                    btnEliminar.Visible = true;
+
+
+                    lblerr.Visible = false;
+                    lbldelete.Visible = false;
                 }
+                else
+                {
+                    lblerr.Visible = true;
+                    lblerr.Text = "No se ha encontrado el estudiante";
+                }
+
+
+
+                
 
             }
             catch
@@ -63,6 +83,40 @@ namespace ClienteColegioSWNet.views
             }
             grilla.DataSource = dt;
             grilla.DataBind();
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                bool del = model.ServicioLocalEstudiante.getInstance().eliminarEstudiante(estudiante.documentoIdentificacion);
+
+
+                if (!del)
+                {
+                    lblerr.Visible = true;
+                    lblerr.Text = "No se ha Eliminado el estudiante";
+                }
+                else
+                {
+                    lbldelete.Visible = true;
+                    grilla.DataSource = null;
+                    grilla.DataBind();
+                    btnEliminar.Visible = false;
+                }
+
+
+                
+                
+            }
+            catch
+            {
+
+            }
+
+
         }
     }
 }
