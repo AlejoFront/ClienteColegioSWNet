@@ -19,7 +19,7 @@ namespace ClienteColegioSWNet.views
         protected string getDatos()
         {
 
-
+            
 
             DataTable dt = new System.Data.DataTable();
 
@@ -27,19 +27,14 @@ namespace ClienteColegioSWNet.views
             dt.Columns.Add(new DataColumn("Grado"));
             dt.Columns.Add(new DataColumn("Cantidad_Materias"));
 
-            model.ServicioLocalExtra.getInstance().darCantidadMateriasPorGradoCursando();
+            int?[] arg  = model.ServicioLocalExtra.getInstance().darCantidadMateriasPorGradoCursando();
 
-            dt.Rows.Add(new Object[] { "Grado1", 11 });
-            dt.Rows.Add(new Object[] { "Grado2", 7 });
-            dt.Rows.Add(new Object[] { "Grado3", 11 });
-            dt.Rows.Add(new Object[] { "Grado4", 8 });
-            dt.Rows.Add(new Object[] { "Grado5", 10 });
-            dt.Rows.Add(new Object[] { "Grado6", 4 });
-            dt.Rows.Add(new Object[] { "Grado7", 3 });
-            dt.Rows.Add(new Object[] { "Grado8", 12 });
-            dt.Rows.Add(new Object[] { "Grado9", 4 });
-            dt.Rows.Add(new Object[] { "Grado10", 7 });
-            dt.Rows.Add(new Object[] { "Grado11", 8 });
+            for (int i = 0; i< arg.Length; i++)
+            {
+                String grado = "Grado "+ (i+1);
+                dt.Rows.Add(new Object[] { grado, arg[i] });
+            }
+
 
             string strdatos;
             strdatos = "[['Grado','catidad de materias por grado'],";
