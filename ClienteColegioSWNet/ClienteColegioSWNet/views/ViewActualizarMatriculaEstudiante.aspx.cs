@@ -217,7 +217,7 @@ namespace ClienteColegioSWNet.views
 
                 ServicioLocalMatricula.getInstance().actualizarMatricula(matriculaactualizar);
             }
-            catch(Exception exp)
+            catch(System.Exception exp)
             {
 
             }

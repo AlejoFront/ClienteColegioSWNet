@@ -262,3 +262,8 @@
     .datos-mat > .grp-srh > input[type="submit"]{
         width: 23%;
     }
+
+#chart_div {
+    width: 95%;
+    min-height: 700px !important;
+}

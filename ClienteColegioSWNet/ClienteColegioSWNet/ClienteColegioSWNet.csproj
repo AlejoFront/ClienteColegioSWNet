@@ -46,6 +46,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,6 +72,7 @@
   <ItemGroup>
     <Content Include="assets\bootstrap.min.css" />
     <Content Include="assets\bootstrap.min.js" />
+    <Content Include="assets\chart.js" />
     <Content Include="assets\JavaScript.js" />
     <Content Include="assets\jquery-3.2.1.slim.min.js" />
     <Content Include="assets\popper.min.js" />
@@ -205,6 +207,7 @@
     <Content Include="views\ViewBuscarEstudiante.aspx" />
     <Content Include="views\ViewBuscarMatricula.aspx" />
     <Content Include="views\ViewBorrarMatriculaEstudiante.aspx" />
+    <Content Include="views\ViewEstadisticaMateriasGrado.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
     <Content Include="views\ViewListarMatriculaEstudiante.aspx" />
     <Content Include="views\ViewListarMatriculas.aspx" />
@@ -293,6 +296,13 @@
     </Compile>
     <Compile Include="views\ViewBorrarMatriculaEstudiante.aspx.designer.cs">
       <DependentUpon>ViewBorrarMatriculaEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\ViewEstadisticaMateriasGrado.aspx.cs">
+      <DependentUpon>ViewEstadisticaMateriasGrado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewEstadisticaMateriasGrado.aspx.designer.cs">
+      <DependentUpon>ViewEstadisticaMateriasGrado.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\ViewListarEstudiante.aspx.cs">
       <DependentUpon>ViewListarEstudiante.aspx</DependentUpon>
