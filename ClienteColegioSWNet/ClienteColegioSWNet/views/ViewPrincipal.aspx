@@ -37,10 +37,11 @@
         Matriculas
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Agregar Matricula</a>
-        <a class="dropdown-item" href="#">Listar Matriculas</a>
-        <a class="dropdown-item" href="#">Buscar Matricula</a>
-        <a class="dropdown-item" href="#">Eliminar Matricula</a>
+          <a class="dropdown-item" href="ViewAgregarMatricula.aspx">Matricular Estudiante</a>
+          <a class="dropdown-item" href="ViewListarMatriculas.aspx">Listar Matriculas</a>
+          <a class="dropdown-item" href="#">Ver Matriculas Estudiante</a>
+          <a class="dropdown-item" href="#">Eliminar Matricula</a>
+          <a class="dropdown-item" href="#">Estadisticas de Matricula</a>
       </div>
     </li>
 

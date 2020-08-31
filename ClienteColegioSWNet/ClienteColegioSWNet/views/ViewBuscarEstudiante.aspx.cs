@@ -25,20 +25,23 @@ namespace ClienteColegioSWNet.views
             DataTable dt = new System.Data.DataTable();
             DataRow dr;
 
-            String nombre = txtnombre.Text;
 
-
-            dt.Columns.Add(new DataColumn("Nombre(s)"));
-            dt.Columns.Add(new DataColumn("Apellidos"));
-            dt.Columns.Add(new DataColumn("Fecha Nacimiento"));
-            dt.Columns.Add(new DataColumn("Documeto  Identificacion"));
-            dt.Columns.Add(new DataColumn("Genero"));
-            dt.Columns.Add(new DataColumn("Eps"));
-            dt.Columns.Add(new DataColumn("Direccion"));
-            dt.Columns.Add(new DataColumn("Email"));
 
             try
             {
+
+                String nombre = txtnombre.Text;
+
+
+                dt.Columns.Add(new DataColumn("Nombre(s)"));
+                dt.Columns.Add(new DataColumn("Apellidos"));
+                dt.Columns.Add(new DataColumn("Fecha Nacimiento"));
+                dt.Columns.Add(new DataColumn("Documeto  Identificacion"));
+                dt.Columns.Add(new DataColumn("Genero"));
+                dt.Columns.Add(new DataColumn("Eps"));
+                dt.Columns.Add(new DataColumn("Direccion"));
+                dt.Columns.Add(new DataColumn("Email"));
+
                 estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantesPorNombre(nombre);
 
 
