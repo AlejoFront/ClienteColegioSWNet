@@ -17,6 +17,9 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <!-- Dropdown -->
+            <li class="nav-item">
+                <a class="nav-link" href="ViewPrincipal.aspx">Principal</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Estudiantes
                 </a>
@@ -36,9 +39,10 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ViewAgregarMatricula.aspx">Matricular Estudiante</a>
                     <a class="dropdown-item" href="ViewListarMatriculas.aspx">Listar Matriculas</a>
-                    <a class="dropdown-item" href="#">Ver Matriculas Estudiante</a>
-                    <a class="dropdown-item" href="#">Eliminar Matricula</a>
-                    <a class="dropdown-item" href="#">Estadisticas de Matricula</a>
+                    <a class="dropdown-item" href="ViewListarMatriculaEstudiante.aspx">Ver Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewActualizarMatriculaEstudiante.aspx">Actualizar Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewBorrarMatriculaEstudiante.aspx">Eliminar Matricula</a>
+                    <a class="dropdown-item" href="ViewEstadisticaMateriasGrado.aspx">Estadisticas de Matricula</a>
                 </div>
             </li>
 
@@ -99,11 +103,11 @@
         <div class="cnt">
             <asp:Button ID="btnbuscarcurso" runat="server" Text="buscar" CssClass="btn btn-primary" Enabled="False" OnClick="btnbuscarcurso_Click1" />
         </div>
-         <div class="cont-tb-list">
+        <div class="cont-tb-list">
             <asp:GridView ID="grillamaterias" runat="server" CssClass="table table-dark table-striped">
             </asp:GridView>
         </div>
-     </form>
+    </form>
 
 
 

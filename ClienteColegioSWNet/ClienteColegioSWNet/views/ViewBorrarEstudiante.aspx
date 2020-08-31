@@ -37,10 +37,12 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Matriculas
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Agregar Matricula</a>
-                    <a class="dropdown-item" href="#">Listar Matriculas</a>
-                    <a class="dropdown-item" href="#">Buscar Matricula</a>
-                    <a class="dropdown-item" href="#">Eliminar Matricula</a>
+                    <a class="dropdown-item" href="ViewAgregarMatricula.aspx">Matricular Estudiante</a>
+                    <a class="dropdown-item" href="ViewListarMatriculas.aspx">Listar Matriculas</a>
+                    <a class="dropdown-item" href="ViewListarMatriculaEstudiante.aspx">Ver Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewActualizarMatriculaEstudiante.aspx">Actualizar Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewBorrarMatriculaEstudiante.aspx">Eliminar Matricula</a>
+                    <a class="dropdown-item" href="ViewEstadisticaMateriasGrado.aspx">Estadisticas de Matricula</a>
                 </div>
             </li>
 
@@ -56,7 +58,7 @@
 
     <form id="form1" runat="server">
 
-        <div class="cont-search">
+        <div class="cont-search-form">
             <label for="search">Documento del estudiante:</label>
             <div class="grp-srh">
                 <asp:TextBox ID="txtdocumento" runat="server" class="form-control"></asp:TextBox>

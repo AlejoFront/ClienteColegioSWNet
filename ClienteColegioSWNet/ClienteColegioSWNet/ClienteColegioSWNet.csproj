@@ -205,7 +205,6 @@
     <Content Include="views\ViewAgregarMatricula.aspx" />
     <Content Include="views\ViewBorrarEstudiante.aspx" />
     <Content Include="views\ViewBuscarEstudiante.aspx" />
-    <Content Include="views\ViewBuscarMatricula.aspx" />
     <Content Include="views\ViewBorrarMatriculaEstudiante.aspx" />
     <Content Include="views\ViewEstadisticaMateriasGrado.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
@@ -282,13 +281,6 @@
     </Compile>
     <Compile Include="views\ViewBuscarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewBuscarEstudiante.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="views\ViewBuscarMatricula.aspx.cs">
-      <DependentUpon>ViewBuscarMatricula.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="views\ViewBuscarMatricula.aspx.designer.cs">
-      <DependentUpon>ViewBuscarMatricula.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\ViewBorrarMatriculaEstudiante.aspx.cs">
       <DependentUpon>ViewBorrarMatriculaEstudiante.aspx</DependentUpon>

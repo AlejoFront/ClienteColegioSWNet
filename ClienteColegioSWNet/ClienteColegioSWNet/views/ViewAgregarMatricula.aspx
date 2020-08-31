@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Agregar Matricula  | Colegio</title>
     <link rel="stylesheet" href="../assets/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/styles.css" />
@@ -20,6 +20,9 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <!-- Dropdown -->
+            <li class="nav-item">
+                <a class="nav-link" href="ViewPrincipal.aspx">Principal</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Estudiantes
                 </a>
@@ -39,9 +42,10 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ViewAgregarMatricula.aspx">Matricular Estudiante</a>
                     <a class="dropdown-item" href="ViewListarMatriculas.aspx">Listar Matriculas</a>
-                    <a class="dropdown-item" href="#">Ver Matriculas Estudiante</a>
-                    <a class="dropdown-item" href="#">Eliminar Matricula</a>
-                    <a class="dropdown-item" href="#">Estadisticas de Matricula</a>
+                    <a class="dropdown-item" href="ViewListarMatriculaEstudiante.aspx">Ver Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewActualizarMatriculaEstudiante.aspx">Actualizar Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewBorrarMatriculaEstudiante.aspx">Eliminar Matricula</a>
+                    <a class="dropdown-item" href="ViewEstadisticaMateriasGrado.aspx">Estadisticas de Matricula</a>
                 </div>
             </li>
 
@@ -95,28 +99,28 @@
                         </select>
                     </div>
                     <div class="cnt">
-                        <asp:Button ID="btnbuscarcurso" runat="server" Text="buscar" CssClass="btn btn-primary" OnClick="btnbuscarcurso_Click" Enabled="False"/>
+                        <asp:Button ID="btnbuscarcurso" runat="server" Text="buscar" CssClass="btn btn-primary" OnClick="btnbuscarcurso_Click" Enabled="False" />
                     </div>
                     <hr />
 
                     <div class="cont-fechas">
                         <div class="form-group">
                             <label for="fechaInicio">Fecha Inicio:</label>
-                            <input id="txtFechaInicio" type="date" class="fch form-control" runat="server"/>
+                            <input id="txtFechaInicio" type="date" class="fch form-control" runat="server" />
                         </div>
                         <div class="form-group">
                             <label for="fechaFinal">Fecha Finalizacion:</label>
-                            <input id="txtFechaFinal" type="date" class="fch form-control" runat="server"/>
+                            <input id="txtFechaFinal" type="date" class="fch form-control" runat="server" />
                         </div>
-                        
+
                     </div>
                     <div class="cont-alerts">
-                        <asp:Label ID="lblerrmtr" runat="server"  CssClass="ct-alr alert cnt-alertt alert-danger" Visible="False"></asp:Label>
+                        <asp:Label ID="lblerrmtr" runat="server" CssClass="ct-alr alert cnt-alertt alert-danger" Visible="False"></asp:Label>
                         <asp:Label ID="lblsussmtr" runat="server" CssClass="ct-alr alert alert-success" Visible="False"></asp:Label>
                     </div>
                     <hr />
                     <br />
-                    
+
                     <asp:GridView ID="grillamaterias" runat="server" CssClass="table table-dark table-striped"></asp:GridView>
                     <br />
                     <div class="cnt">

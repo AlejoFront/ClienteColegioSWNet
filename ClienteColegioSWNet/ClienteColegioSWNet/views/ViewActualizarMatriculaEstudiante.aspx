@@ -17,6 +17,9 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <!-- Dropdown -->
+            <li class="nav-item">
+                <a class="nav-link" href="ViewPrincipal.aspx">Principal</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Estudiantes
                 </a>
@@ -36,9 +39,10 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ViewAgregarMatricula.aspx">Matricular Estudiante</a>
                     <a class="dropdown-item" href="ViewListarMatriculas.aspx">Listar Matriculas</a>
-                    <a class="dropdown-item" href="#">Ver Matriculas Estudiante</a>
-                    <a class="dropdown-item" href="#">Eliminar Matricula</a>
-                    <a class="dropdown-item" href="#">Estadisticas de Matricula</a>
+                    <a class="dropdown-item" href="ViewListarMatriculaEstudiante.aspx">Ver Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewActualizarMatriculaEstudiante.aspx">Actualizar Matriculas Estudiante</a>
+                    <a class="dropdown-item" href="ViewBorrarMatriculaEstudiante.aspx">Eliminar Matricula</a>
+                    <a class="dropdown-item" href="ViewEstadisticaMateriasGrado.aspx">Estadisticas de Matricula</a>
                 </div>
             </li>
 
@@ -89,14 +93,14 @@
 
             </select>
         </div>
-        
+
         <div class="cont-alerts">
             <asp:Label ID="lblerrmtr" runat="server" CssClass="ct-alr alert cnt-alertt alert-danger" Visible="False"></asp:Label>
             <asp:Label ID="lblsussmtr" runat="server" CssClass="ct-alr alert alert-success" Visible="False"></asp:Label>
         </div>
 
         <div class="cnt">
-            <asp:Button ID="btnbuscarcurso" runat="server" Text="buscar" CssClass="btn btn-primary" Enabled="False" OnClick="btnbuscarcurso_Click"/>
+            <asp:Button ID="btnbuscarcurso" runat="server" Text="buscar" CssClass="btn btn-primary" Enabled="False" OnClick="btnbuscarcurso_Click" />
         </div>
         <br />
         <div class="cont-datoss">
@@ -107,7 +111,7 @@
             <div class="datos-mat">
                 <div class="grp-srh">
                     <asp:TextBox ID="txtcodmatricula" runat="server" CssClass="form-control" placeholder="Digite el Cod. del registro matricula"></asp:TextBox>
-                    <asp:Button ID="btnbuscarmatricula" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnbuscarmatricula_Click"/>
+                    <asp:Button ID="btnbuscarmatricula" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnbuscarmatricula_Click" />
                 </div>
                 <div class="form-group">
                     <label for="materia">Materia:</label>
@@ -130,7 +134,7 @@
                 </div>
 
                 <div class="cnt">
-                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-success" OnClick="btnActualizar_Click" /> 
+                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-success" OnClick="btnActualizar_Click" />
                 </div>
             </div>
         </div>
