@@ -198,13 +198,15 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="views\ViewActualizarEstudiante.aspx" />
+    <Content Include="views\ViewActualizarMatriculaEstudiante.aspx" />
     <Content Include="views\ViewAgregarEstudiante.aspx" />
     <Content Include="views\ViewAgregarMatricula.aspx" />
     <Content Include="views\ViewBorrarEstudiante.aspx" />
-    <Content Include="views\ViewBorrarMatricula.aspx" />
     <Content Include="views\ViewBuscarEstudiante.aspx" />
     <Content Include="views\ViewBuscarMatricula.aspx" />
+    <Content Include="views\ViewBorrarMatriculaEstudiante.aspx" />
     <Content Include="views\ViewListarEstudiante.aspx" />
+    <Content Include="views\ViewListarMatriculaEstudiante.aspx" />
     <Content Include="views\ViewListarMatriculas.aspx" />
     <Content Include="views\ViewPrincipal.aspx" />
     <Content Include="views\ViewPromedioEstudiante.aspx" />
@@ -243,6 +245,13 @@
     <Compile Include="views\ViewActualizarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewActualizarEstudiante.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\ViewActualizarMatriculaEstudiante.aspx.cs">
+      <DependentUpon>ViewActualizarMatriculaEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewActualizarMatriculaEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewActualizarMatriculaEstudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="views\ViewAgregarEstudiante.aspx.cs">
       <DependentUpon>ViewAgregarEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,13 +273,6 @@
     <Compile Include="views\ViewBorrarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewBorrarEstudiante.aspx</DependentUpon>
     </Compile>
-    <Compile Include="views\ViewBorrarMatricula.aspx.cs">
-      <DependentUpon>ViewBorrarMatricula.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="views\ViewBorrarMatricula.aspx.designer.cs">
-      <DependentUpon>ViewBorrarMatricula.aspx</DependentUpon>
-    </Compile>
     <Compile Include="views\ViewBuscarEstudiante.aspx.cs">
       <DependentUpon>ViewBuscarEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,12 +287,26 @@
     <Compile Include="views\ViewBuscarMatricula.aspx.designer.cs">
       <DependentUpon>ViewBuscarMatricula.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\ViewBorrarMatriculaEstudiante.aspx.cs">
+      <DependentUpon>ViewBorrarMatriculaEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewBorrarMatriculaEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewBorrarMatriculaEstudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="views\ViewListarEstudiante.aspx.cs">
       <DependentUpon>ViewListarEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="views\ViewListarEstudiante.aspx.designer.cs">
       <DependentUpon>ViewListarEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\ViewListarMatriculaEstudiante.aspx.cs">
+      <DependentUpon>ViewListarMatriculaEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ViewListarMatriculaEstudiante.aspx.designer.cs">
+      <DependentUpon>ViewListarMatriculaEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\ViewListarMatriculas.aspx.cs">
       <DependentUpon>ViewListarMatriculas.aspx</DependentUpon>

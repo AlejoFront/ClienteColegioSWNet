@@ -28,12 +28,6 @@ namespace ClienteColegioSWNet.views
         {
 
             String documento = "";
-           /* 
-            DataTable ds = new DataTable();
-            ds = null;
-            grillaestudiante.DataSource = ds;
-            grillaestudiante.DataBind();
-           */
             DataTable dt = new System.Data.DataTable();
             DataRow dr;
             try
