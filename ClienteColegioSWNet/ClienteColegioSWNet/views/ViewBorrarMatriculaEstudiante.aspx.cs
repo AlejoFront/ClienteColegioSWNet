@@ -54,6 +54,7 @@ namespace ClienteColegioSWNet.views
                     lblerror.Visible = false;
                     grillaestudiante.Visible = true;
                     btnbuscarcurso.Enabled = true;
+                    lblsussmtr.Visible = false;
                 }
                 else
                 {
@@ -61,6 +62,7 @@ namespace ClienteColegioSWNet.views
                     lblerror.Text = "No se ha encontrado el estudiante";
                     lblerror.Visible = true;
                     grillaestudiante.Visible = false;
+
                 }
 
                 grillaestudiante.DataSource = dt;

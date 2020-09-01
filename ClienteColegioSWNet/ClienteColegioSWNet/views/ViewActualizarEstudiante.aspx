@@ -28,6 +28,7 @@
                       <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
                       <a class="dropdown-item" href="ViewBuscarEstudiante.aspx">Buscar Estudiantes</a>
                       <a class="dropdown-item" href="ViewBorrarEstudiante.aspx">Eliminar Estudiantes</a>
+                      <a class="dropdown-item" href="ViewPromedioEstudiante.aspx">Promedio Estudiante</a>
                 </div>
             </li>
 

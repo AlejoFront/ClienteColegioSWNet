@@ -29,6 +29,7 @@
                     <a class="dropdown-item" href="ViewListarEstudiante.aspx">Listar Estudiantes</a>
                     <a class="dropdown-item" href="ViewActualizarEstudiante.aspx">Actualizar Estudiantes</a>
                     <a class="dropdown-item" href="ViewBorrarEstudiante.aspx">Eliminar Estudiantes</a>
+                    <a class="dropdown-item" href="ViewPromedioEstudiante.aspx">Promedio Estudiante</a>
                 </div>
             </li>
 
@@ -56,7 +57,8 @@
 
     <h1 class="title">Promedio Estudiante</h1>
     <form id="form1" runat="server">
-        <div class="cont-search">
+
+        <div class="cont-search-form">
             <label for="search">Documento de identidad del estudiante:</label>
             <div class="grp-srh">
                 <asp:TextBox ID="txtdocumento" runat="server" class="form-control"></asp:TextBox>
