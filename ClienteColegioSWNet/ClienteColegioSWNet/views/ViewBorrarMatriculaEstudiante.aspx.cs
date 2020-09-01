@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -193,7 +195,6 @@ namespace ClienteColegioSWNet.views
                 }
                 else
                 {
-                    
                     lblsussmtr.Visible = false;
                     lblerrmtr.Visible = true;
                     lblerrmtr.Text = "No se ha borrado la matricula";
@@ -207,6 +208,11 @@ namespace ClienteColegioSWNet.views
             {
 
             }
+        }
+
+        private Color ColorPalette(object red)
+        {
+            throw new NotImplementedException();
         }
     }
 }

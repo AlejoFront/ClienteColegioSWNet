@@ -107,9 +107,9 @@
         
 
         <div class="cont-tb-list">
-            &nbsp;<asp:Label ID="lblregistro" runat="server" Text="Digite el # de registro de la matricula" Visible="False"></asp:Label>
+            &nbsp;<asp:Label ID="lblregistro" runat="server" Text="Digite el código de la matricula" Visible="False"></asp:Label>
             <div class="cont-btn-delete">
-                <asp:TextBox ID="txtcodMateria" runat="server" class="form-control" Visible="False" required="true"></asp:TextBox>
+                <asp:TextBox ID="txtcodMateria" runat="server" class="form-control" Visible="False" ></asp:TextBox>
                 <asp:Button ID="btbDelete" runat="server" Text="Eliminar" CssClass="btn badge-danger" OnClick="btbDelete_Click" Visible="False"/>
             </div>
             <asp:GridView ID="grillamaterias" runat="server" CssClass="table table-dark table-striped">

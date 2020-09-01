@@ -45,21 +45,34 @@ namespace ClienteColegioSWNet.views
                 estudiantes = model.ServicioLocalEstudiante.getInstance().darEstudiantesPorNombre(nombre);
 
 
-                for (int i = 0; i < estudiantes.Length; i++)
+                if ( estudiantes != null)
                 {
+                    for (int i = 0; i < estudiantes.Length; i++)
+                    {
 
-                    dr = dt.NewRow();
-                    dr["Nombre(s)"] = estudiantes[i].nombres;
-                    dr["Apellidos"] = estudiantes[i].apellidos;
-                    dr["Fecha Nacimiento"] = estudiantes[i].fechaNacimiento;
-                    dr["Documeto  Identificacion"] = estudiantes[i].documentoIdentificacion;
+                        dr = dt.NewRow();
+                        dr["Nombre(s)"] = estudiantes[i].nombres;
+                        dr["Apellidos"] = estudiantes[i].apellidos;
+                        dr["Fecha Nacimiento"] = estudiantes[i].fechaNacimiento;
+                        dr["Documeto  Identificacion"] = estudiantes[i].documentoIdentificacion;
 
-                    dr["Genero"] = (estudiantes[i].genero == 1) ? "Mujer" : "Hombre";
+                        dr["Genero"] = (estudiantes[i].genero == 1) ? "Mujer" : "Hombre";
 
-                    dr["Eps"] = estudiantes[i].eps;
-                    dr["Direccion"] = estudiantes[i].direccion;
-                    dr["Email"] = estudiantes[i].correo;
-                    dt.Rows.Add(dr);
+                        dr["Eps"] = estudiantes[i].eps;
+                        dr["Direccion"] = estudiantes[i].direccion;
+                        dr["Email"] = estudiantes[i].correo;
+                        dt.Rows.Add(dr);
+                    }
+
+                    lblsuss.Visible = true;
+                    lblsuss.Text = "Estudiante Encontrado";
+                    lblerr.Visible = false;
+                }
+                else
+                {
+                    lblerr.Visible = true;
+                    lblerr.Text = "Estudiante <b>&nbsp;&nbsp;No&nbsp;&nbsp;</b> encontrado";
+                    lblsuss.Visible = false;
                 }
 
             }

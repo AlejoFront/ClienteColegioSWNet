@@ -53,7 +53,7 @@
         </ul>
     </nav>
 
-    <h1 class="title">Buscar Estudiante</h1>
+    <h1 class="title">Buscar Estudiante  Por Nombre</h1>
     <form id="form1" runat="server">
 
 
@@ -65,6 +65,10 @@
             </div>
         </div>
 
+        <div class="cont-alerts mt-5">
+            <asp:Label ID="lblerr" runat="server" CssClass="ct-alr alert cnt-alertt alert-danger" Visible="False"></asp:Label>
+            <asp:Label ID="lblsuss" runat="server" CssClass="ct-alr alert alert-success" Visible="False"></asp:Label>
+        </div>
 
         <div class="cont-tb-list">
             <asp:GridView ID="grilla" runat="server" CssClass="table table-dark table-striped">

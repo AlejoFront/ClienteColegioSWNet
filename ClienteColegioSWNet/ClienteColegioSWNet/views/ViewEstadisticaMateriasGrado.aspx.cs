@@ -37,7 +37,7 @@ namespace ClienteColegioSWNet.views
 
 
             string strdatos;
-            strdatos = "[['Grado','catidad de materias por grado'],";
+            strdatos = "[['Grado','cantidad de materias por grado'],";
 
             foreach (DataRow dr in dt.Rows)
             {

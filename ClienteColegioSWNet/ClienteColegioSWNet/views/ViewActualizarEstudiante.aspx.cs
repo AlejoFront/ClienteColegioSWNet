@@ -29,15 +29,31 @@ namespace ClienteColegioSWNet.views
                 estudiantes = model.ServicioLocalEstudiante.getInstance().buscarEstudiante(doc);
 
 
-                txtnombre.Text = estudiantes.nombres;
-                txtapellido.Text = estudiantes.apellidos;
-                txtdate.Value = Convert.ToString(estudiantes.fechaNacimiento.ToString("yyyy-MM-dd"));
-                txtidentificacion.Text = estudiantes.documentoIdentificacion;
-                txtgenero.Value = Convert.ToString(estudiantes.genero);
-                txteps.Text = estudiantes.eps;
-                txttelefono.Text = estudiantes.telefono;
-                txtdireccion.Text = estudiantes.direccion;
-                txtemail.Text = estudiantes.correo;
+                if (estudiantes !=null)
+                {
+                    txtnombre.Text = estudiantes.nombres;
+                    txtapellido.Text = estudiantes.apellidos;
+                    txtdate.Value = Convert.ToString(estudiantes.fechaNacimiento.ToString("yyyy-MM-dd"));
+                    txtidentificacion.Text = estudiantes.documentoIdentificacion;
+                    txtgenero.Value = Convert.ToString(estudiantes.genero);
+                    txteps.Text = estudiantes.eps;
+                    txttelefono.Text = estudiantes.telefono;
+                    txtdireccion.Text = estudiantes.direccion;
+                    txtemail.Text = estudiantes.correo;
+
+                    lblsuss.Visible = true;
+                    lblsuss.Text = "Estudiante Encontrado";
+                    lblerr.Visible = false;
+                    lblupdate.Visible = false;
+                }
+                else
+                {
+                    lblerr.Visible = true;
+                    lblerr.Text = "Estudiante <b>&nbsp;&nbsp;No&nbsp;&nbsp;</b> encontrado";
+                    lblsuss.Visible = false;
+                    btnBuscar.Enabled = true;
+                    txtdoc.Enabled = true;
+                }
 
 
             }
@@ -54,6 +70,9 @@ namespace ClienteColegioSWNet.views
         {
 
             Response.Redirect("ViewActualizarEstudiante.aspx");
+
+            lblsuss.Visible = true;
+            lblsuss.Text = "Tranquilo <b>&nbsp;&nbsp;No&nbsp;&nbsp;</b> se ha actualizado nada porque has cancelado ";
         }
 
         protected void btnActualizar_Click(object sender, EventArgs e)
@@ -114,6 +133,7 @@ namespace ClienteColegioSWNet.views
                     Panel1.Visible = false;
                     btnActualizar.Visible = false;
                     btncancelar.Visible = false;
+                    lblsuss.Visible = false;
                 }
 
             }

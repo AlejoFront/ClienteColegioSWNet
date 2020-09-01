@@ -61,14 +61,14 @@
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
             </div>
         </div>
+        <div class="cont-alerts ">
+            <asp:Label ID="Label1" runat="server" CssClass="mt-5 ct-alr alert cnt-alertt alert-danger" Visible="False"></asp:Label>
+            <asp:Label ID="lblsuss" runat="server" CssClass="mt-5 ct-alr alert alert-success" Visible="False"></asp:Label>
+            <asp:Label ID="lblupdate" runat="server" CssClass="mt-5 ct-alr alert alert-success" Text="Se ha Actualizado el Estudiante" Visible="False"></asp:Label>
+            <asp:Label ID="lblerr" runat="server" CssClass="mt-5 ct-alr alert cnt-alertt alert-danger" Text="No se ha Actualizado  el Estudiante" Visible="False"></asp:Label>
+        </div>
         <hr />
 
-        <div class="cnt-alert alert-success">
-            <asp:Label ID="lblupdate" runat="server" Text="Se ha Actualizado el Estudiante" Visible="False"></asp:Label>
-        </div>
-        <div class="cnt-alert alert-danger">
-            <asp:Label ID="lblerr" runat="server" Text="No se ha Actualizado  el Estudiante" Visible="False"></asp:Label>
-        </div>
                
         <asp:Panel ID="Panel1" runat="server" Visible="False">
                     <div class="cont-forms">

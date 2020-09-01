@@ -42,6 +42,24 @@ namespace ClienteColegioSWNet.views
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
+        /// Control lblerr.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblerr;
+
+        /// <summary>
+        /// Control lblsuss.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsuss;
+
+        /// <summary>
         /// Control grilla.
         /// </summary>
         /// <remarks>
